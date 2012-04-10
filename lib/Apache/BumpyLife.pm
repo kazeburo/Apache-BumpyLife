@@ -11,7 +11,7 @@ our $VERSION = '0.01';
 our $MAX_REQUESTS_PER_CHILD_MIN;
 our $MAX_REQUESTS_PER_CHILD_MAX;
 our $MAX_REQUESTS_PER_CHILD;
-our $REQUEST_PER_CHILD = 0;
+our $REQUESTS_PER_CHILD = 0;
 
 sub set_max_requests_per_child_min {
     my $class = shift;
@@ -143,3 +143,4 @@ This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =cut
+
