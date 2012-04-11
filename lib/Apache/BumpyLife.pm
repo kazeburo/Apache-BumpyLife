@@ -94,7 +94,7 @@ __END__
 
 =head1 NAME
 
-Apache::BumpyLife - mod_perl 1.x module for setting randam value to MaxRequestsPerChild.
+Apache::BumpyLife - mod_perl 1.x module for setting random value to MaxRequestsPerChild.
 
 =head1 SYNOPSIS
 
@@ -119,7 +119,7 @@ Apache::BumpyLife - mod_perl 1.x module for setting randam value to MaxRequestsP
 
 ******************************** NOIICE *******************
 
-Apache::BumpyLife is httpd 1.3.x and mod_perl 1.x module for setting randam value to 
+Apache::BumpyLife is httpd 1.3.x and mod_perl 1.x module for setting random value to 
 MaxRequestsPerChild within min and max.
 
 =head1 API
