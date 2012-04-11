@@ -122,6 +122,8 @@ Apache::BumpyLife - mod_perl 1.x module for setting random value to MaxRequestsP
 Apache::BumpyLife is httpd 1.3.x and mod_perl 1.x module for setting random value to 
 MaxRequestsPerChild within min and max.
 
+This module can moderate the load when many child process is switched to new one at once.
+
 =head1 API
 
 =over 4
