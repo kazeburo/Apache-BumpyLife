@@ -8,10 +8,16 @@ use Apache::Constants ();
 use constant IS_WIN32 => $Config{'osname'} eq 'MSWin32' ? 1 : 0;
 
 our $VERSION = '0.01';
+our $DEBUG;
 our $MAX_REQUESTS_PER_CHILD_MIN;
 our $MAX_REQUESTS_PER_CHILD_MAX;
 our $MAX_REQUESTS_PER_CHILD;
 our $REQUESTS_PER_CHILD = 0;
+
+sub set_debug {
+    my $class = shift;
+    $DEBUG = shift || 0;
+}
 
 sub set_max_requests_per_child_min {
     my $class = shift;
@@ -69,6 +75,7 @@ sub _exit_if_maxreq {
     $REQUESTS_PER_CHILD++;
 
     if ( $REQUESTS_PER_CHILD >= $MAX_REQUESTS_PER_CHILD ) {
+        $r->warn( sprintf "Terminate by BumpyLife [%s] req:%s",$$,$REQUESTS_PER_CHILD) if $DEBUG;
         if (IS_WIN32) {
             # child_terminate() is disabled in win32 Apache
             CORE::exit(-2);
