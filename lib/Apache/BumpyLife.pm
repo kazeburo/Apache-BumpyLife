@@ -102,7 +102,7 @@ Apache::BumpyLife - mod_perl 1.x module for setting random value to MaxRequestsP
   PerlModule  Apache::BumpyLife
   <Perl>
     Apache::BumpyLife->set_max_requests_per_child_max(100);
-    Apache::BumpyLife->set_max_requests_per_child_max(80);
+    Apache::BumpyLife->set_max_requests_per_child_min(80);
   </Perl>
 
   PerlCleanupHandler Apache::BumpyLife
